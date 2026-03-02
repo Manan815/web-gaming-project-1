@@ -1,0 +1,26 @@
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f0f0; }
+header { background:#333; color:#fff; padding:1rem; text-align:center; }
+nav a { color:#fff; margin:0 1rem; text-decoration:none; }
+main { padding:2rem; text-align:center; }
+button, .btn { padding:0.5rem 1rem; background:#007BFF; color:white; border:none; cursor:pointer; }
+button:hover, .btn:hover { background:#0056b3; }
+form { max-width:400px; margin:auto; display:flex; flex-direction:column; gap:1rem; }
+input { padding:0.5rem; font-size:1rem; }
+/* Dark theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f;
+}
+
+body.dark-theme nav a {
+    color: #f0f0f0;
+}
+
+body.dark-theme table {
+    color: #f0f0f0;
+    border-color: #f0f0f0;
+}
