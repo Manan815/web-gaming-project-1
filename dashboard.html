@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - FunZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header>
+        <h1>FunZone Dashboard</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+        </nav>
+        <button id="themeToggle" class="btn">Toggle Dark/Light Theme</button>
+    </header>
+
+    <main>
+        <section id="profileCard">
+            <h2>Welcome, <span id="userDisplay"></span>!</h2>
+            <div id="profileInfo">
+                <img id="profilePicDisplay" src="" alt="Profile Picture" style="width:120px;height:120px;border-radius:50%;">
+                <p id="ageDisplay"></p>
+                <p id="emailDisplay"></p>
+            </div>
+        </section>
+
+        <section id="gameStats">
+            <h3>Your Game Statistics</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Times Played</th>
+                        <th>High Score / Wins</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tic Tac Toe</td>
+                        <td id="tttPlayed">0</td>
+                        <td id="tttHigh">0</td>
+                    </tr>
+                    <tr>
+                        <td>Hangman</td>
+                        <td id="hangmanPlayed">0</td>
+                        <td id="hangmanHigh">0</td>
+                    </tr>
+                    <tr>
+                        <td>Memory Game</td>
+                        <td id="memoryPlayed">0</td>
+                        <td id="memoryHigh">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/localstorage.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

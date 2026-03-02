@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunZone - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header>
+        <h1>FunZone</h1>
+        <nav>
+            <a href="index.html" class="btn">Home</a>
+            <a href="register.html" class="btn">Register</a>
+            <a href="dashboard.html" class="btn">Dashboard</a>
+            <a href="games.html" class="btn">Games Hub</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Platform Introduction -->
+        <section id="intro">
+            <h2>Welcome to FunZone!</h2>
+            <p>Your ultimate gaming hub with Tic Tac Toe, Hangman, Memory Game, and more! Track your scores, compete with friends, and enjoy hours of fun.</p>
+        </section>
+
+        <!-- Featured Games Showcase -->
+        <section id="featuredGames">
+  <h2>Featured Games</h2>
+
+  <div class="games-grid">
+
+    <div class="game-card">
+      <img src="images/game-previews/tictactoe.png" alt="Tic Tac Toe">
+      <h3>Tic Tac Toe</h3>
+      <a href="tictactoe.html" class="btn">Play Now</a>
+    </div>
+
+    <div class="game-card">
+      <img src="images/game-previews/hangman.png" alt="Hangman">
+      <h3>Hangman</h3>
+      <a href="hangman.html" class="btn">Play Now</a>
+    </div>
+
+    <div class="game-card">
+      <img src="images/game-previews/memorygame.png" alt="Memory Game">
+      <h3>Memory Game</h3>
+      <a href="memorygame.html" class="btn">Play Now</a>
+    </div>
+
+  </div>
+</section>
+
+        <!-- Public Leaderboard -->
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Top Player Wins / High Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tic Tac Toe</td>
+                        <td id="tttLeader">0</td>
+                    </tr>
+                    <tr>
+                        <td>Hangman</td>
+                        <td id="hangmanLeader">0</td>
+                    </tr>
+                    <tr>
+                        <td>Memory Game</td>
+                        <td id="memoryLeader">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FunZone. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Display top scores from localStorage
+        const stats = JSON.parse(localStorage.getItem('gameStats')) || {
+            ttt:{played:0,high:0},
+            hangman:{played:0,high:0},
+            memory:{played:0,high:0}
+        };
+
+        document.getElementById('tttLeader').textContent = stats.ttt.high;
+        document.getElementById('hangmanLeader').textContent = stats.hangman.high;
+        document.getElementById('memoryLeader').textContent = stats.memory.high;
+    </script>
+</body>
+</html>

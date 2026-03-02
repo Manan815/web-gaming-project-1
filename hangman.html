@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman - FunZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header>
+        <h1>Hangman</h1>
+        <nav>
+            <a href="games.html" class="btn">Return to Games Hub</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="instructions">
+            <h3>Instructions:</h3>
+            <p>Guess the letters to complete the word before your attempts run out!</p>
+        </section>
+
+        <section id="gameArea">
+            <div id="wordDisplay"></div>
+            <p>Wrong Letters: <span id="wrongLetters"></span></p>
+            <p>Attempts Left: <span id="attemptsLeft"></span></p>
+
+            <input type="text" id="letterInput" maxlength="1" placeholder="Type a letter">
+            <button id="guessBtn" class="btn">Guess</button>
+            <div id="scoreboard">
+                <p>Wins: <span id="hangmanWins">0</span></p>
+                <p>Time: <span id="hangmanTimer">0s</span></p>
+            </div>
+
+            <button id="saveScoreBtn" class="btn">Save Score</button>
+        </section>
+    </main>
+
+    <script src="js/hangman.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

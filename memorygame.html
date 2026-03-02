@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game - FunZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header>
+        <h1>Memory Game</h1>
+        <nav>
+            <a href="games.html" class="btn">Return to Games Hub</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="instructions">
+            <h3>Instructions:</h3>
+            <p>Click cards to find matching pairs. Match all pairs to win!</p>
+        </section>
+
+        <section id="gameArea">
+            <div id="memoryBoard" class="memory-board"></div>
+
+            <div id="scoreboard">
+                <p>Wins: <span id="memoryWins">0</span></p>
+                <p>Time: <span id="memoryTimer">0s</span></p>
+            </div>
+
+            <button id="saveScoreBtn" class="btn">Save Score</button>
+        </section>
+    </main>
+
+    <script src="js/memorygame.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FunZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header>
+        <h1>FunZone - Register</h1>
+        <nav>
+            <a href="index.html" class="btn">Home</a>
+            <a href="games.html" class="btn">Games Hub</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="registerSection">
+            <form id="registerForm">
+                <h2>Create Your Profile</h2>
+
+                <!-- Username -->
+                <label for="username">Username*</label>
+                <input type="text" id="username" name="username" required>
+
+                <!-- Email -->
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Password -->
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" required>
+                <meter max="4" id="passwordStrength"></meter>
+                <p id="strengthText"></p>
+
+                <!-- Age / Birthdate -->
+                <label for="birthdate">Birthdate (Min 15 years)*</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <!-- Profile Picture -->
+                <label for="profilePic">Profile Picture</label>
+                <input type="file" id="profilePic" accept="image/*">
+                <img id="profilePreview" src="" alt="Profile Preview" style="display:none; width:120px; height:120px; border-radius:50%; margin-top:10px;">
+
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FunZone. All rights reserved.</p>
+    </footer>
+
+    <script src="js/localstorage.js"></script>
+    <script>
+        // Password strength indicator
+        const password = document.getElementById('password');
+        const strengthText = document.getElementById('strengthText');
+        const strengthMeter = document.getElementById('passwordStrength');
+
+        password.addEventListener('input', function(){
+            const val = password.value;
+            let strength = 0;
+            if(val.length >= 6) strength++;
+            if(/[A-Z]/.test(val)) strength++;
+            if(/[0-9]/.test(val)) strength++;
+            if(/[\W]/.test(val)) strength++;
+
+            strengthMeter.value = strength;
+
+            let text = '';
+            switch(strength){
+                case 0: text=''; break;
+                case 1: text='Weak'; break;
+                case 2: text='Fair'; break;
+                case 3: text='Good'; break;
+                case 4: text='Strong'; break;
+            }
+            strengthText.textContent = text;
+        });
+    </script>
+</body>
+</html>

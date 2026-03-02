@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - FunZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+        <nav>
+            <a href="games.html" class="btn">Return to Games Hub</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="instructions">
+            <h3>Instructions:</h3>
+            <p>Click on the cells to place X or O. First to align 3 wins!</p>
+        </section>
+
+        <section id="gameArea">
+            <div id="tttBoard">
+                <div data-cell></div>
+                <div data-cell></div>
+                <div data-cell></div>
+                <div data-cell></div>
+                <div data-cell></div>
+                <div data-cell></div>
+                <div data-cell></div>
+                <div data-cell></div>
+                <div data-cell></div>
+            </div>
+
+            <div id="scoreboard">
+                <p>Wins: <span id="tttWins">0</span></p>
+                <p>Time: <span id="tttTimer">0s</span></p>
+            </div>
+
+            <button id="saveScoreBtn" class="btn">Save Score</button>
+        </section>
+    </main>
+
+    <script src="js/tictactoe.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
